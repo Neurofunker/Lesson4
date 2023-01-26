@@ -7,17 +7,17 @@
 //int[] array = new int[8]{1,2,3,4,5,6,7,8};
 //int[] array2 = {1,2,3};
 
-int[] Generatearray()
+int[] Generatearray(int size, int min, int max)
 {
-    int[] arr =new int[8];
+    int[] arr = new int[size];
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = new Random().Next(0,2);
+        arr[i] = new Random().Next(min, max + 1);
     }
     return arr;
 }
 
-void PrintArray(int [] arr)
+void PrintArray(int[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
@@ -25,5 +25,5 @@ void PrintArray(int [] arr)
     }
 }
 
-int[] array = Generatearray();
+int[] array = Generatearray(8, 0, 1);
 PrintArray(array);

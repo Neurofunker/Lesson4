@@ -13,8 +13,8 @@ Console.WriteLine($"Количество цифр в числе {number} = {resu
 
 int CountDigit(int num)
 {
-    int count = 0;
-    while (num > 0)
+    int count = 1;
+    while (num > 9)
     {
         num = num / 10;
         count++;
